@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_source/pages/staggered_grid_view.dart';
+import 'package:youtube_source/pages/swipeable_cards_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Youtube Sourece',
       theme: ThemeData.dark(),
-      home: const StaggeredGridViewPage(),
-      // home: const StaggeredGridViewPage(),
+      home: const SwipeableCardsPage(),
     );
   }
 }
