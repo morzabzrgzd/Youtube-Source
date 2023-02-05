@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_source/pages/swipeable_cards_page.dart';
+import 'package:youtube_source/pages/rotate_3d_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Youtube Sourece',
       theme: ThemeData.dark(),
-      home: const SwipeableCardsPage(),
+      home: const Rotate3DPage(),
     );
   }
 }
