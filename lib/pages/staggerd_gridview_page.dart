@@ -9,18 +9,18 @@ class StaggeredGridViewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        elevation: .5,
         title: Text(
           'Staggered Grid View',
           style: GoogleFonts.montserrat(),
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
         child: StaggeredGrid.count(
           crossAxisCount: 2,
-          crossAxisSpacing: 8,
           mainAxisSpacing: 8,
+          crossAxisSpacing: 8,
           children: List.generate(
             60,
             (index) => ClipRRect(

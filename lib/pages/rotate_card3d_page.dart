@@ -1,29 +1,33 @@
+import 'package:flutter/material.dart';
 import 'dart:math';
 
-import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class Rotate3DPage extends StatefulWidget {
-  const Rotate3DPage({super.key});
-
+class RotateCard3DPage extends StatefulWidget {
+  const RotateCard3DPage({Key? key}) : super(key: key);
   @override
-  State<Rotate3DPage> createState() => _Rotate3DPageState();
+  State<RotateCard3DPage> createState() => _RotateCard3DPageState();
 }
 
-class _Rotate3DPageState extends State<Rotate3DPage> {
+class _RotateCard3DPageState extends State<RotateCard3DPage> {
   double x = 0.00;
   double y = 0.00;
   double amplitude = 0.3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         elevation: 0,
-        title: const Text('Rotate 3D'),
+        // ignore: prefer_const_constructors
+        title: Text(
+          'Rotate Card3D',
+          style: GoogleFonts.montserrat(),
+        ),
       ),
+      backgroundColor: Colors.grey[200],
       body: Center(
         child: Transform(
-          alignment: Alignment.center,
+          alignment: FractionalOffset.center,
           transform: Matrix4.identity()
             ..rotateX(x)
             ..rotateY(y),
@@ -49,18 +53,19 @@ class _Rotate3DPageState extends State<Rotate3DPage> {
               }
             },
             child: Container(
-              height: 450,
-              margin: const EdgeInsets.symmetric(horizontal: 30),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              height: 500,
+              width: double.infinity,
               decoration: BoxDecoration(
+                color: Colors.amber,
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.grey,
-                boxShadow: const [
-                  BoxShadow(color: Colors.grey, blurRadius: 10)
-                ],
                 image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage('assets/images/card.png'),
                 ),
+                boxShadow: [
+                  const BoxShadow(color: Colors.black26, blurRadius: 28),
+                ],
               ),
             ),
           ),
