@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_source/pages/linkdin_lofin_page.dart';
+import 'package:youtube_source/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Youtube Sourece',
-      theme: ThemeData.dark(),
-      home: const LinkdinLoginPage(),
+      theme: ThemeData.light(),
+      home: const LoginPage(),
     );
   }
 }
